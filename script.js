@@ -2,7 +2,7 @@
 var todayDate = moment().format('dddd, MMM Do YYYY');
 $("#currentDay").html(todayDate);
 
-//make lots of edits
+//make lots of edits, the save isn't working now??
 
 $(document).ready(function () {
     // saveBtn click listener 
@@ -43,7 +43,7 @@ $(document).ready(function () {
         })
     }
 
-    // Get item from local storage if any -- DOESN'T WORK!!
+    // Get item from local storage if any -- DOESN'T WORK!!siojfioja
     $("#hour8 .description").val(localStorage.getItem("hour8"));
     $("#hour9 .description").val(localStorage.getItem("hour9"));
     $("#hour10 .description").val(localStorage.getItem("hour10"));
