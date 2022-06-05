@@ -8,11 +8,12 @@ var THREEPM = document.getElementById("3")
 var FOURPM = document.getElementById("4")
 var FIVEPM = document.getElementById("5")
 
-// Get item from schedule.txt- DOESN'T WORK!!siojfioja
-var data = readFileSync("schedule.txt", 'utf-8').split("\n")
+var goopydatatwo = []
+localStorage.setItem("VarKey", goopydatatwo)
+var goopydatatwo = localStorage.getItem("VarKey")
 
 //call vars to html for use
-NINEAM.innerHTML = "<p>" + data[0] + "</p>";
+NINEAM.innerHTML = "<p>" + goopydatatwo + "</p>";
 
 // Display today's information
 var todayDate = moment().format('dddd, MMM Do YYYY');
@@ -25,8 +26,6 @@ $(document).ready(function () {
         var text = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
 
-        // Save information in txt document
-        localStorage.setItem(time, text);
     })
    
     function timeTracker() {
